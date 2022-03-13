@@ -1,0 +1,146 @@
+    body {
+        margin: auto;
+        font-size: 14px;
+        font-family: 'Nunito Sans';
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    .header {
+        display: flex;
+        height: 80px;
+        padding: 0 80px;
+        background: hsl(0, 0%, 100%);
+        box-shadow: -5px -5px 3px 0 rgb(0 0 0 / 0%), 0 6px 20px 0 rgb(0 0 0 / 8%);
+    }
+
+    .header-title {
+        font-weight: bold;
+    }
+
+    .filter-container {
+        margin-bottom: 45px;
+    }
+
+    .search-input {
+        width: 480px;
+        height: 50px;
+        text-indent: 30px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: -5px -5px 3px 0 rgb(0 0 0 / 0%), 0 6px 20px 0 rgb(0 0 0 / 8%);
+    }
+
+    .search-input:focus {
+        outline: none;
+    }
+
+    .back-button {
+        display: none;
+        width: 140px;
+        height: 45px;
+        cursor: pointer;
+        margin-left: 80px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: -5px -5px 3px 0 rgb(0 0 0 / 0%), 0 6px 20px 0 rgb(0 0 0 / 8%);
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 75px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        width: 266px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: hsl(0, 0%, 100%);
+        box-shadow: -4px -3px 3px 0 rgb(0 0 0 / 6%), 0px 7px 20px 0 rgb(0 0 0 / 8%);
+    }
+
+    .countries-container {
+        margin: 45px 80px;
+    }
+
+    .country-detail {
+        margin: 45px 80px;
+        display: none;
+        align-items: center;
+    }
+
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-container-info {
+        margin-left: 120px;
+    }
+
+    .flag {
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .info {
+        margin: 30px 0 40px 25px;
+    }
+
+    .info-name p, .detail-container-info p {
+        font-weight: 300;
+    }
+
+    .info-name span, .detail-container-info span {
+        color: #161616;
+        font-weight: bold;
+    }
+
+    @media (max-width: 1024px) {
+        .wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .detail-flag {
+            width: 500px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .detail-flag {
+            width: 268px;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .header-title {
+            font-size: medium;
+            align-self: center;
+        }
+
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-input {
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .country-detail {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        .detail-container-info {
+            margin: 0;
+        }
+    }

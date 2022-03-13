@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <title>Countries Dashboard</title>
+
+</head>
+<body>
+  <header class="header">
+      <h1 class="header-title">Where in the World?</h1>
+  </header>
+  <div class="countries-container">
+    <div class="filter-container">
+        <input
+                class="search-input"
+                id="searchInput"
+                type="text"
+                onkeyup="fetchCountries()"
+                placeholder="Search for a country..">
+    </div>
+    <div class="wrapper">
+    </div>
+  </div>
+  <div class="detail-container">
+    <button class="back-button">Back</button>
+    <div class="country-detail"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
