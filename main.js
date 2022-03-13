@@ -1,3 +1,9 @@
+const wrapper = document.querySelector('.wrapper');
+const countryContainer = document.querySelector('.country-detail');
+const filterContainer = document.querySelector('.filter-container');
+const backButton = document.querySelector('.back-button');
+const countryDetail = document.querySelector('.country-detail');
+
 const fetchCountries = async () => {
     try {
         const res = await fetch('https://restcountries.com/v2/all');
@@ -9,10 +15,6 @@ const fetchCountries = async () => {
 }
 
 const createCountryInfo = (countries) => {
-    const wrapper = document.querySelector('.wrapper');
-    const countryContainer = document.querySelector('.country-detail');
-    const filterContainer = document.querySelector('.filter-container');
-    const backButton = document.querySelector('.back-button');
     for(let item of countries) {
         const infoContainer = document.createElement('div');
         const flag = document.createElement('img');
@@ -49,16 +51,9 @@ const createCountryInfo = (countries) => {
             backButton.style.display = "block";
         })
     }
-    backButton.addEventListener("click", function() {
-        wrapper.style.display = "grid";
-        filterContainer.style.display = "flex";
-        countryContainer.style.display = "none";
-        backButton.style.display = "none";
-    })
 }
 
 const countryDetails = (item) => {
-    const countryDetail = document.querySelector('.country-detail');
     const flag = document.createElement('img');
     const info = document.createElement('div');
     const countryName = document.createElement('h2');
@@ -84,6 +79,14 @@ const countryDetails = (item) => {
     info.append(capital);
     countryDetail.append(flag);
     countryDetail.append(info);
+    backButton.addEventListener("click", function() {
+        wrapper.style.display = "grid";
+        filterContainer.style.display = "flex";
+        countryContainer.style.display = "none";
+        backButton.style.display = "none";
+        flag.remove();
+        info.remove();
+    })
 }
 
 
