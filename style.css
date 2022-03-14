@@ -266,3 +266,18 @@ li a:hover {
 .about-description p {
     font-size: 32px;
 }
+
+@media (max-width: 1024px) {
+    .about-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image-box img {
+        width: 100%;
+    }
+}
+
