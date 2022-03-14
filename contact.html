@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Countries API | About the challange</title>
+
+</head>
+<body>
+<header class="header">
+  <h1 class="header-title">Where in the World?</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</header>
+<div class="contact-container">
+  <div class="contact-wrapper">
+    <div class="contact-form-box">
+      <div class="contact-form-box-content">
+        <h1>Contact Us</h1>
+        <p>
+          Hello Visitors! You see all countries from the API on the homepage. If you see some
+          information that is not valid please write us your email address and we will fix it as soon ass possible!
+        </p>
+      </div>
+      <form name="myForm" id="contact-form" action="submit">
+        <div class="contact-form-wrapper">
+          <input id="email" class="email" type="text" placeholder="Email Address"/>
+          <button type="submit" class="submit-email">
+            <img src="images/icon-arrow.svg" alt=""/>
+          </button>
+        </div>
+        <p class="invalid-email-message"></p>
+      </form>
+    </div>
+    <div class="contact-image-box"></div>
+  </div>
+</div>
+
+<script src="contact.js"></script>
+</body>
+</html>

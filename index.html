@@ -9,22 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
 
-  <title>Countries Dashboard</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <title>Countries API | Home</title>
 
 </head>
 <body>
   <header class="header">
       <h1 class="header-title">Where in the World?</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
   </header>
   <div class="countries-container">
-    <div class="filter-container">
-        <input
-                class="search-input"
-                id="searchInput"
-                type="text"
-                onkeyup="fetchCountries()"
-                placeholder="Search for a country..">
-    </div>
     <div class="wrapper">
     </div>
   </div>

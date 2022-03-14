@@ -1,6 +1,5 @@
 const wrapper = document.querySelector('.wrapper');
 const countryContainer = document.querySelector('.country-detail');
-const filterContainer = document.querySelector('.filter-container');
 const backButton = document.querySelector('.back-button');
 const countryDetail = document.querySelector('.country-detail');
 
@@ -13,6 +12,10 @@ const fetchCountries = async () => {
         console.log(error);
     }
 }
+
+window.addEventListener('load', (event) => {
+    fetchCountries();
+});
 
 const createCountryInfo = (countries) => {
     for(let item of countries) {
@@ -46,7 +49,6 @@ const createCountryInfo = (countries) => {
             countryDetails(item);
             console.log(item);
             wrapper.style.display = "none";
-            filterContainer.style.display = "none";
             countryContainer.style.display = "flex";
             backButton.style.display = "block";
         })
@@ -81,7 +83,6 @@ const countryDetails = (item) => {
     countryDetail.append(info);
     backButton.addEventListener("click", function() {
         wrapper.style.display = "grid";
-        filterContainer.style.display = "flex";
         countryContainer.style.display = "none";
         backButton.style.display = "none";
         flag.remove();
@@ -90,12 +91,3 @@ const countryDetails = (item) => {
 }
 
 
-async function searchCountry() {
-    const searchInput = document.querySelector('#searchInput');
-    const searchTerm = searchInput.elements.query.value;
-    const res = await axios.get('https://restcountries.com/v2/all/' + {searchTerm});
-}
-
-window.addEventListener('load', (event) => {
-    fetchCountries();
-});
